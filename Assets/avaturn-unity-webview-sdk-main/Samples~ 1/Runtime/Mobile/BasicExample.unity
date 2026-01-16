@@ -879,6 +879,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1166166081}
+    - targetCorrespondingSourceObject: {fileID: 8771091787928289351, guid: c2ca2d7a8cc7e344285ab81de5769515,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1166166083}
   m_SourcePrefab: {fileID: -4161369568681901532, guid: c2ca2d7a8cc7e344285ab81de5769515,
     type: 3}
 --- !u!4 &1166166079 stripped
@@ -912,6 +916,34 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 1166166078}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1166166083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166166080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbe40211440a28f45bf51793637e36a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prepareAvatar: {fileID: 1166166081}
+  eyeMesh: {fileID: 0}
+  eyeAOMesh: {fileID: 0}
+  eyeLashMesh: {fileID: 0}
+  headMesh: {fileID: 0}
+  eyeMeshCloseIndex: 8
+  eyeAOMeshCloseIndex: 29
+  eyeLashMeshCloseIndex: 23
+  headMeshCloseIndex: 20
+  blendShapeWeight: 0
+  blinkingSpeed: 6
+  blinkingResetSpeed: 8
+  maxTimer: 5
+  maxBlinkDuration: 2
+  eyeWeightSlider: {fileID: 0}
+  setupDone: 0
 --- !u!1 &1599334779
 GameObject:
   m_ObjectHideFlags: 0

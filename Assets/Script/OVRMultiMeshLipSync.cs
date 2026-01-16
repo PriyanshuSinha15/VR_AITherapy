@@ -71,7 +71,6 @@ public class OVRMultiMeshLipSync : MonoBehaviour
         var SMRenders = playerTransform.GetComponentsInChildren<SkinnedMeshRenderer>(true);
         foreach(SkinnedMeshRenderer smr in SMRenders)
         {
-            //Debug.Log(smr.name);
             if (smr.name == HEAD_MESH)
                 head = smr;
             else if(smr.name == TEETH_MESH)
