@@ -90,12 +90,12 @@ public class OVRLipSyncContextMorphTarget : MonoBehaviour
     void Start ()
     {
         // morph target needs to be set manually; possibly other components will need the same
-        if(skinnedMeshRenderer == null)
-        {
-            Debug.LogError("LipSyncContextMorphTarget.Start Error: " +
-                "Please set the target Skinned Mesh Renderer to be controlled!");
-            return;
-        }
+        //if(skinnedMeshRenderer == null)
+        //{
+        //    Debug.LogError("LipSyncContextMorphTarget.Start Error: " +
+        //        "Please set the target Skinned Mesh Renderer to be controlled!");
+        //    return;
+        //}
 
         // make sure there is a phoneme context assigned to this object
         lipsyncContext = GetComponent<OVRLipSyncContextBase>();
