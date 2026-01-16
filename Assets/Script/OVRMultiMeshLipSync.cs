@@ -34,6 +34,7 @@ public class OVRMultiMeshLipSync : MonoBehaviour
     private void Start()
     {
         prepareAvatar.OnModelPrepared += PrepareAvatar_OnModelPrepared;
+        TrySetTargetMeshes();
     }
 
     private void PrepareAvatar_OnModelPrepared(object sender, System.EventArgs e)

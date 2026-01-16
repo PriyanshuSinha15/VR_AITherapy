@@ -46,6 +46,8 @@ public class EyeBlinking : MonoBehaviour
 
         currentTimer = maxTimer;
         blinkDuration = maxBlinkDuration;
+
+        TrySetTargetMeshes();
     }
 
     private void PrepareAvatar_OnModelPrepared(object sender, System.EventArgs e)
