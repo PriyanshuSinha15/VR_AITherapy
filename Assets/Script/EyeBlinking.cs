@@ -103,13 +103,10 @@ public class EyeBlinking : MonoBehaviour
 
     private void ApplyBlendShapeWeight(float blendShapeWeight)
     {
-        if (eyeMesh != null && eyeAOMesh != null && eyeLashMesh != null && headMesh != null)
-        {
-            eyeMesh.SetBlendShapeWeight(eyeMeshCloseIndex, blendShapeWeight);
-            eyeAOMesh.SetBlendShapeWeight(eyeAOMeshCloseIndex, blendShapeWeight);
-            eyeLashMesh.SetBlendShapeWeight(eyeLashMeshCloseIndex, blendShapeWeight);
-            headMesh.SetBlendShapeWeight(headMeshCloseIndex, blendShapeWeight);
-        }
+        eyeMesh.SetBlendShapeWeight(eyeMeshCloseIndex, blendShapeWeight);
+        eyeAOMesh.SetBlendShapeWeight(eyeAOMeshCloseIndex, blendShapeWeight);
+        eyeLashMesh.SetBlendShapeWeight(eyeLashMeshCloseIndex, blendShapeWeight);
+        headMesh.SetBlendShapeWeight(headMeshCloseIndex, blendShapeWeight);
     }
 
     public void TrySetTargetMeshes()
