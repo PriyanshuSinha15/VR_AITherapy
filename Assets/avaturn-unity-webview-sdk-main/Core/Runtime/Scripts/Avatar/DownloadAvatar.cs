@@ -13,6 +13,8 @@ namespace Avaturn.Core.Runtime.Scripts.Avatar
   [RequireComponent(typeof(GltfAsset))]
   public class DownloadAvatar : MonoBehaviour
   {
+        private const string PLAYER_AVATAR_URL = "AvatarURL";
+
     private Action<Transform> _onDownloaded;
     
     public void SetOnDownloaded(Action<Transform> avatarDownloaded) => 
@@ -36,7 +38,12 @@ namespace Avaturn.Core.Runtime.Scripts.Avatar
       var success = await asset.Load(url, new AvaturnDownloadProvider());
       
       if (success)
-        _onDownloaded?.Invoke(transform);
+       {
+          _onDownloaded?.Invoke(transform);
+          PlayerPrefs.SetString(PLAYER_AVATAR_URL, url);
+                PlayerPrefs.Save();
+       }
+            
       else
         Debug.LogError($"Fail to download");
     }

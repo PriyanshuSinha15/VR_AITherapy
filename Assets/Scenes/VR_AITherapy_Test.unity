@@ -1343,7 +1343,17 @@ PrefabInstance:
       objectReference: {fileID: 1576254163}
     - target: {fileID: 6634799105515926861, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
         type: 3}
+      propertyPath: _onAvatarDownloaded.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1576254163}
+    - target: {fileID: 6634799105515926861, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
       propertyPath: _onAvatarDownloaded.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634799105515926861, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: _onAvatarDownloaded.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6634799105515926861, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
@@ -1353,12 +1363,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6634799105515926861, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
         type: 3}
+      propertyPath: _onAvatarDownloaded.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PrepareModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634799105515926861, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
       propertyPath: _onAvatarDownloaded.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Avaturn.Core.Runtime.Scripts.Avatar.PrepareAvatar, Avaturn.Core.Runtime
       objectReference: {fileID: 0}
     - target: {fileID: 6634799105515926861, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
         type: 3}
+      propertyPath: _onAvatarDownloaded.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Avaturn.Core.Runtime.Scripts.Avatar.PrepareAvatar, Avaturn.Core.Runtime
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634799105515926861, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
       propertyPath: _onAvatarDownloaded.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634799105515926861, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: _onAvatarDownloaded.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1389,7 +1414,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InvokeOnStart: 1
-  URL: https://assets.hub.in3d.io/model_2022_12_22_T182855_939_9f0cea445f.glb
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
