@@ -175,7 +175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &51590017
 RectTransform:
   m_ObjectHideFlags: 0
@@ -258,10 +258,10 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1985697352}
-        m_TargetAssemblyTypeName: ChatGPTManager, Assembly-CSharp
-        m_MethodName: AskChatGPT
-        m_Mode: 0
+      - m_Target: {fileID: 1985697354}
+        m_TargetAssemblyTypeName: ClearInputField, Assembly-CSharp
+        m_MethodName: ClearChatInputField
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1762,7 +1762,7 @@ MonoBehaviour:
   headMap: 0100000002000000030000000400000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000
   tongueMap: 0100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000
   teethMap: 0100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000
-  smoothing: 12
+  smoothing: 30
 --- !u!114 &1677778167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2248,6 +2248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1985697353}
   - component: {fileID: 1985697352}
+  - component: {fileID: 1985697354}
   m_Layer: 0
   m_Name: ChatGPT Manager
   m_TagString: Untagged
@@ -2282,6 +2283,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1985697354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985697351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1922e847b2245e84f8a320031c41b499, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chatInputField: {fileID: 51590018}
 --- !u!1 &2056705571
 GameObject:
   m_ObjectHideFlags: 0
@@ -2299,7 +2313,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2056705572
 RectTransform:
   m_ObjectHideFlags: 0
