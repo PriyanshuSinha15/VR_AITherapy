@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/VR_AITherapy_Final.unity
-    guid: ef6e9a0c4dc374c41ac37a5290df589d
+    path: Assets/Scenes/VR_AITherapy_Test.unity
+    guid: dedc47420c346a040bcca2c06943adb5
   m_configObjects: {}
