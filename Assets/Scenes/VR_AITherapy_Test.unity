@@ -1328,6 +1328,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6634799105515926861, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
         type: 3}
+      propertyPath: customDomain
+      value: vraitherapy.avaturn.dev
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634799105515926861, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
       propertyPath: _onAvatarDownloaded.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
