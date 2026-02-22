@@ -378,6 +378,187 @@ MonoBehaviour:
   tongueMap: 0100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000
   teethMap: 0100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000
   smoothing: 12
+--- !u!1001 &148412832
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 487151999495456449, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487151999495456462, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487151999965524640, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 487151999965524640, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487151999965524640, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487151999965524640, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487151999965524640, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 487151999965524640, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487151999965524640, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487151999965524640, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487151999965524640, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487151999965524640, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487151999965524640, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487151999965524643, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: m_Name
+      value: AvaturnMobile(Create Character)
+      objectReference: {fileID: 0}
+    - target: {fileID: 487151999972932565, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -84
+      objectReference: {fileID: 0}
+    - target: {fileID: 487152000269665774, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: m_Text
+      value: Upload Image
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634799105515926861, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: customDomain
+      value: vraitherapy.avaturn.dev/create/upload
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634799105515926861, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: _onAvatarDownloaded.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634799105515926861, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: _onAvatarDownloaded.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634799105515926861, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: _onAvatarDownloaded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1576254163}
+    - target: {fileID: 6634799105515926861, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: _onAvatarDownloaded.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1576254163}
+    - target: {fileID: 6634799105515926861, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: _onAvatarDownloaded.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634799105515926861, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: _onAvatarDownloaded.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634799105515926861, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: _onAvatarDownloaded.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PrepareModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634799105515926861, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: _onAvatarDownloaded.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PrepareModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634799105515926861, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: _onAvatarDownloaded.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Avaturn.Core.Runtime.Scripts.Avatar.PrepareAvatar, Avaturn.Core.Runtime
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634799105515926861, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: _onAvatarDownloaded.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Avaturn.Core.Runtime.Scripts.Avatar.PrepareAvatar, Avaturn.Core.Runtime
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634799105515926861, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: _onAvatarDownloaded.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634799105515926861, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      propertyPath: _onAvatarDownloaded.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 487151999965524643, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 148412834}
+  m_SourcePrefab: {fileID: 100100000, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb, type: 3}
+--- !u!1 &148412833 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 487151999965524643, guid: 4cfd3204c2ee7f74b8bf8c6d167789cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 148412832}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &148412834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148412833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 988ed778f6713d4408cd06cbe909dc39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InvokeOnStart: 1
 --- !u!1 &711885029
 GameObject:
   m_ObjectHideFlags: 0
@@ -1428,5 +1609,6 @@ SceneRoots:
   - {fileID: 1599334780}
   - {fileID: 879357832}
   - {fileID: 1915694787}
+  - {fileID: 148412832}
   - {fileID: 27030727}
   - {fileID: 66904097}
