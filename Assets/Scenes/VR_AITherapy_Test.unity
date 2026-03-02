@@ -872,6 +872,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1713909923702680042, guid: cf8f41f4a768b544ebd95ce752c214ed,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2391922841398404571, guid: cf8f41f4a768b544ebd95ce752c214ed,
         type: 3}
       propertyPath: m_IsActive
@@ -894,6 +899,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1576254164}
+    - targetCorrespondingSourceObject: {fileID: 8771091787928289351, guid: cf8f41f4a768b544ebd95ce752c214ed,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1576254165}
+    - targetCorrespondingSourceObject: {fileID: 8771091787928289351, guid: cf8f41f4a768b544ebd95ce752c214ed,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1576254166}
   m_SourcePrefab: {fileID: -4161369568681901532, guid: cf8f41f4a768b544ebd95ce752c214ed,
     type: 3}
 --- !u!4 &1576254160 stripped
@@ -954,6 +967,93 @@ MonoBehaviour:
   maxTimer: 5
   maxBlinkDuration: 2
   setupDone: 0
+--- !u!114 &1576254165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576254161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cedb9f76e9c7ef949892954d9e236a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.3
+  inverted: 0
+  pressed:
+    m_Name: Pressed
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: e5389fa2-a572-4bdb-ac7e-efadbf6215bf
+    m_Processors: 
+    m_Interactions: Press
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 809f21a2-d011-4008-9c57-131ac396a6ed
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Pressed
+      m_Flags: 0
+    - m_Name: 
+      m_Id: cc327452-421b-4500-a4d9-d87a8b0415e7
+      m_Path: <Touchscreen>/Press
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Pressed
+      m_Flags: 0
+    m_Flags: 0
+  axis:
+    m_Name: Axis
+    m_Type: 0
+    m_ExpectedControlType: Vector2
+    m_Id: a9acf961-d6a3-40e3-ba5d-d21792d82e96
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 2909cd3f-a613-4afb-9f15-4b5045e588f7
+      m_Path: <Mouse>/delta
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Axis
+      m_Flags: 0
+    - m_Name: 
+      m_Id: a33fffe6-5272-48e4-b9eb-614c6dbb6fb8
+      m_Path: <Touchscreen>/delta
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Axis
+      m_Flags: 0
+    m_Flags: 0
+--- !u!136 &1576254166
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576254161}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.27
+  m_Height: 1.97
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.86, z: 0}
 --- !u!1 &1599334779
 GameObject:
   m_ObjectHideFlags: 0
