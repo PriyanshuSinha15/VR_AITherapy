@@ -19,6 +19,8 @@ namespace Avaturn.Core.Runtime.Scripts.Mobile
     [SerializeField] private GameObject _webViewGameObject;
     [SerializeField] private RectTransform _webViewFrame;
 
+        [SerializeField] private string customDomain;
+
     private UniWebView _webView;
 
     public override void Start()
@@ -28,7 +30,7 @@ namespace Avaturn.Core.Runtime.Scripts.Mobile
       string domain, link;
       if (_linkFromAPI == "")
       {
-        domain = "vraitherapy.avaturn.dev";
+        domain = customDomain;
         link = $"https://{domain}?sdk=true";
       }
       else
