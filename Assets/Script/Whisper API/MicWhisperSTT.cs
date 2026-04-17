@@ -10,8 +10,8 @@ public class MicWhisperSTT : MonoBehaviour
     [Header("Scene Difference")]
     public bool isFinalScene;
 
-    [Header("OpenAI")]
-    public string apiKey = "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";
+    //[Header("OpenAI")]
+    private string apiKey = "";
 
     [Header("API Manager Script")]
     public ApiManager apiManager;
