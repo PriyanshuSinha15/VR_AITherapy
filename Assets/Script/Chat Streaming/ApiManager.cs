@@ -7,6 +7,9 @@ using TMPro;
 
 public class ApiManager : MonoBehaviour
 {
+    [Header("Scene Difference")]
+    public bool isFinalScene;
+
     [Header("Chat Streaming")]
     public TMP_Text chatText;
     public TMP_InputField chatInputField;
@@ -20,6 +23,24 @@ public class ApiManager : MonoBehaviour
 
     [Header("Chat Session")]
     public string sessionId = "";
+
+    //[Header("Open AI")]
+    private string apiKey = "";
+
+    public void Start()
+    {
+        if(PlayerPrefs.HasKey("token"))
+        {
+            Debug.Log("Already Logged In");
+        }
+        else
+        {
+            Login();
+        }
+
+    }
+
+
 
     #region Login
     public void Login()
@@ -71,6 +92,8 @@ public class ApiManager : MonoBehaviour
             // Save token
             PlayerPrefs.SetString("token", token);
             PlayerPrefs.Save();
+
+            CreateSession();
         }
         else
         {
@@ -208,14 +231,93 @@ public class ApiManager : MonoBehaviour
 
     void OnAIResponseUpdated(string text)
     {
-        chatText.text = text;
+        if (isFinalScene)
+        {
+
+        }
+        else
+        {
+            chatText.text = text;
+        }
     }
 
     void OnAIResponseComplete(string finalText)
     {
         Debug.Log("Final AI Response: " + finalText);
+        //Connecting to Generate speech
+
+        string continousText = finalText.Replace("\n", " ");
+        StartCoroutine(GenerateSpeech(continousText));
     }
     #endregion  Chat Message
+
+    #region TextToSpeech
+    IEnumerator GenerateSpeech(string text)
+    {
+        string url = "https://api.openai.com/v1/audio/speech";
+
+        //apiKey = "sk-xxxxxxxx"; // ⚠️ TEMP ONLY (move to backend later)
+
+        var body = new
+        {
+            model = "gpt-4o-mini-tts",
+            voice = "alloy",
+            input = text
+        };
+
+        string jsonBody = Newtonsoft.Json.JsonConvert.SerializeObject(body);
+
+        UnityWebRequest request = new UnityWebRequest(url, "POST");
+
+        byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonBody);
+
+        request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+        request.downloadHandler = new DownloadHandlerBuffer();
+
+        request.SetRequestHeader("Content-Type", "application/json");
+        request.SetRequestHeader("Authorization", "Bearer " + apiKey);
+
+        yield return request.SendWebRequest();
+
+        if (request.result != UnityWebRequest.Result.Success)
+        {
+            Debug.LogError("TTS Error: " + request.error);
+            Debug.LogError(request.downloadHandler.text);
+        }
+        else
+        {
+            byte[] audioData = request.downloadHandler.data;
+
+            StartCoroutine(PlayAudio(audioData));
+        }
+    }
+
+    IEnumerator PlayAudio(byte[] audioData)
+    {
+        string path = Application.persistentDataPath + "/ai_speech.mp3";
+
+        System.IO.File.WriteAllBytes(path, audioData);
+
+        using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip("file://" + path, AudioType.MPEG))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogError("Audio Load Error: " + www.error);
+            }
+            else
+            {
+                AudioClip clip = DownloadHandlerAudioClip.GetContent(www);
+
+                AudioSource source = GetComponent<AudioSource>();
+                source.clip = clip;
+                source.Play();
+            }
+        }
+    }
+
+    #endregion TextToSpeech
 
     [System.Serializable]
     public class LoginRequest

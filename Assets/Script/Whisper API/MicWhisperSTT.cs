@@ -3,15 +3,22 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.Networking;
 using Newtonsoft.Json.Linq;
+using TMPro;
 
 public class MicWhisperSTT : MonoBehaviour
 {
+    [Header("Scene Difference")]
+    public bool isFinalScene;
+
     [Header("OpenAI")]
-    public string apiKey = "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";
+    public string apiKey = "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";
 
     [Header("API Manager Script")]
     public ApiManager apiManager;
     [Space]
+
+    public TMP_Text recordedText;
+
     private AudioClip recordedClip;
     private string filePath;
 
@@ -65,6 +72,13 @@ public class MicWhisperSTT : MonoBehaviour
             var json = JObject.Parse(request.downloadHandler.text);
             string transcribedText = json["text"].ToString();
 
+            if (isFinalScene)
+            {
+            }
+            else
+            {
+                recordedText.text = "You : " +  transcribedText; 
+            }
             apiManager.message = transcribedText;
             apiManager.StartStreaming();
         }
