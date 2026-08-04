@@ -7,9 +7,6 @@ using TMPro;
 
 public class ApiManager : MonoBehaviour
 {
-    [Header("Scene Difference")]
-    public bool isFinalScene;
-
     [Header("Chat Streaming")]
     public TMP_Text chatText;
     public TMP_InputField chatInputField;
@@ -23,6 +20,9 @@ public class ApiManager : MonoBehaviour
 
     [Header("Chat Session")]
     public string sessionId = "";
+
+    [Header("Audio")]
+    public AudioSource audioSource;
 
     //[Header("Open AI")]
     private string apiKey = "";
@@ -39,8 +39,6 @@ public class ApiManager : MonoBehaviour
         }
 
     }
-
-
 
     #region Login
     public void Login()
@@ -153,7 +151,7 @@ public class ApiManager : MonoBehaviour
 
     #endregion Chat Session
 
-    #region Chat Message
+        #region Chat Message
 
     //public void SendChat()
     //{
@@ -226,12 +224,22 @@ public class ApiManager : MonoBehaviour
         {
             Debug.LogError("Request Failed: " + request.error);
             Debug.LogError("Response: " + request.downloadHandler.text);
+
+            if(request.responseCode == 401)
+            {
+                Debug.Log("Token expired. Logging in again...");
+
+                yield return StartCoroutine(LoginCoroutine(email, password));
+
+                StartStreaming();
+                yield break;
+            }
         }
     }
 
     void OnAIResponseUpdated(string text)
     {
-        if (isFinalScene)
+        if (AssetManager.instance.isFinalScene)
         {
 
         }
@@ -310,9 +318,9 @@ public class ApiManager : MonoBehaviour
             {
                 AudioClip clip = DownloadHandlerAudioClip.GetContent(www);
 
-                AudioSource source = GetComponent<AudioSource>();
-                source.clip = clip;
-                source.Play();
+                //audioSource = GetComponent<AudioSource>();
+                audioSource.clip = clip;
+                audioSource.Play();
             }
         }
     }

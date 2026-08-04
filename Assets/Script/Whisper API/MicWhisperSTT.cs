@@ -7,9 +7,6 @@ using TMPro;
 
 public class MicWhisperSTT : MonoBehaviour
 {
-    [Header("Scene Difference")]
-    public bool isFinalScene;
-
     //[Header("OpenAI")]
     private string apiKey = "";
 
@@ -72,7 +69,7 @@ public class MicWhisperSTT : MonoBehaviour
             var json = JObject.Parse(request.downloadHandler.text);
             string transcribedText = json["text"].ToString();
 
-            if (isFinalScene)
+            if (AssetManager.instance.isFinalScene)
             {
             }
             else

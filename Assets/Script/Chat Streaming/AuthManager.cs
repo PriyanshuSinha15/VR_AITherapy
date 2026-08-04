@@ -15,8 +15,15 @@ public class AuthManager : MonoBehaviour
             Instance = this;
         }
 
-        Token = PlayerPrefs.GetString("token", "");
-        SessionID = PlayerPrefs.GetString("sessionId", "");
+        if (PlayerPrefs.HasKey("token"))
+        {
+            Token = PlayerPrefs.GetString("token", "");
+        }
+
+        if (PlayerPrefs.HasKey("sessionId"))
+        {
+            SessionID = PlayerPrefs.GetString("sessionId", "");
+        }
     }
     void Start()
     {
