@@ -26,7 +26,7 @@ public class MicWhisperSTT : MonoBehaviour
         Debug.Log("Recording started...");
     }
 
-    // 🛑 Stop Recording & Send
+    // Stop Recording & Send
     public void StopRecording()
     {
         Microphone.End(null);
@@ -38,7 +38,7 @@ public class MicWhisperSTT : MonoBehaviour
         StartCoroutine(SendAudio(filePath));
     }
 
-    // 📤 Upload to OpenAI
+    // Upload to OpenAI
     IEnumerator SendAudio(string path)
     {
         byte[] audioData = File.ReadAllBytes(path);
@@ -81,7 +81,7 @@ public class MicWhisperSTT : MonoBehaviour
         }
     }
 
-    // 💾 Convert AudioClip → WAV
+    // Convert AudioClip → WAV
     void SaveWav(string filename, AudioClip clip)
     {
         Directory.CreateDirectory(Path.GetDirectoryName(filename));

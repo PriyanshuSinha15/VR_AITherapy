@@ -59,7 +59,7 @@ public class ApiManager : MonoBehaviour
 
         string jsonBody = JsonUtility.ToJson(body);
 
-        Debug.Log("Sending JSON: " + jsonBody); // 👈 MUST CHECK
+        Debug.Log("Sending JSON: " + jsonBody); // MUST CHECK
 
         UnityWebRequest request = new UnityWebRequest(url, "POST");
 
@@ -264,7 +264,7 @@ public class ApiManager : MonoBehaviour
     {
         string url = "https://api.openai.com/v1/audio/speech";
 
-        //apiKey = "sk-xxxxxxxx"; // ⚠️ TEMP ONLY (move to backend later)
+        //apiKey = "sk-xxxxxxxx"; // TEMP ONLY (move to backend later)
 
         var body = new
         {
